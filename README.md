@@ -17,3 +17,13 @@ nix基本使用
 虚拟机导入到主机
 
 手机编程（安卓=ARM-Linux）
+
+frp 云服务器  rdp协议—远程连接
+
+doxygen注释规范
+
+github action
+
+docker
+
+cocotb
