@@ -27,3 +27,11 @@ github action
 docker
 
 cocotb
+
+切一些helloworld
+
+
+
+EDA验证 EDAST
+
+帕拉丁？FPGA？
