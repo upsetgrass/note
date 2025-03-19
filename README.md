@@ -1,6 +1,6 @@
 # flag
 
-程序画架构图
+程序画架构图mdbook
 
 PR流程熟悉
 
@@ -35,3 +35,8 @@ cocotb
 EDA验证 EDAST
 
 帕拉丁？FPGA？
+
+qemu tcg的使用（原项目）
+
+
+
