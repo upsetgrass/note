@@ -1,5 +1,5 @@
 
-[章节一](./chapter_1)
-[章节二](./chapter_2)
+[章节一](./index.md)
+[章节二](./chapter_2.md)
 
 
