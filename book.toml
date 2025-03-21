@@ -1,11 +1,12 @@
-[bool]
+[book]
 authors = ["upsetgrass"]
 language = "zh"
 multilingual = false
 src = "docs/"
 title = "note_test"
 
-[[output.html]
-git-repository-url = "https://upsetgrass.github.io/note/"
+[output.html]
+git-repository-url = "https://openxiangshan.github.io/ChiselAIA/"
 mathjax-support = true
-]
+
+[output.pdf]
