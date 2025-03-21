@@ -29,6 +29,6 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./book
+          publish_dir: .
           force_orphan: true  # 强制创建无历史的 gh-pages 分支
 
