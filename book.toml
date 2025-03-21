@@ -6,7 +6,7 @@ src = "docs/"
 title = "note_test"
 
 [output.html]
-git-repository-url = "https://openxiangshan.github.io/ChiselAIA/"
+git-repository-url = "https://upsetgrass.github.io/note/"
 mathjax-support = true
 
 [output.pdf]
