@@ -23,12 +23,16 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         working-directory: .
         run: mdbook build
+      - name: Move HTML files to root
+        run: |
+          mv ./book/html/* ./book/
+          rm -r ./book/html  # 删除空的 html 目录
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./book
           force_orphan: true  # 强制创建无历史的 gh-pages 分支
 
