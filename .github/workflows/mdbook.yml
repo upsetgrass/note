@@ -1,29 +1,32 @@
-name: Deploy mdBook to GitHub Pages
-
+name: deploy-github-pages
 on:
   push:
     branches:
-      - main
+      - main  # 只在 main 分支推送时触发部署
 
 jobs:
-  build:
+  deploy-github-pages:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install mdBook
         run: |
           curl -sSL https://github.com/rust-lang/mdBook/releases/latest/download/mdbook-linux-x86_64.tar.gz | tar -xz
-          mv mdbook /usr/local/bin/
+          mv mdbook /usr/local/bin/mdbook
+          chmod +x /usr/local/bin/mdbook
 
-      - name: Build book
+      - name: Build mdBook
         run: mdbook build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./book
+          force_orphan: true  # 创建无历史的 gh-pages 分支，确保 Pages 文件是最新的
 
