@@ -1,4 +1,0 @@
-# hello
-## hello linux
-
-shit
