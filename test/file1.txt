@@ -1,9 +1,0 @@
-文件系统          1K的块      已用    可用 已用% 挂载点
-tmpfs            1598724      2756 1595968    1% /run
-/dev/nvme0n1p3 205307624 192618240 2187244   99% /
-tmpfs            7993616    964792 7028824   13% /dev/shm
-tmpfs               5120         4    5116    1% /run/lock
-efivarfs             192       116      72   62% /sys/firmware/efi/efivars
-tmpfs            7993616         0 7993616    0% /run/qemu
-/dev/nvme1n1p1    262144     38312  223832   15% /boot/efi
-tmpfs            1598720       180 1598540    1% /run/user/1000
