@@ -1,0 +1,37 @@
+name: deploy-github-pages   # 定义workflow或步骤名称
+on:                        # on:触发条件
+  push:
+    branches:
+      - main               # 当main分支有新的push，触发该github action
+jobs:
+  deploy-github-pages:     # 使用最新的Ubuntu作为执行环境
+    runs-on: ubuntu-latest # 运行环境
+    permissions:           # 设置权限，使得action可以向gh-pages分支写入
+      contents: write
+    steps:                 # 以下都是各个任务
+      - name: Checkout repository         # 步骤名称
+        uses: actions/checkout@v4         # uses-使用github action中写好的脚本，这里是在拉取我的代码
+
+      - name: Setup mdBook
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: peaceiris/actions-mdbook@v1.2.0       # 主分支上安装mdbook
+        with:
+          mdbook-version: '0.4.5'
+
+      - name: Build site
+        if: ${{ github.ref == 'refs/heads/main' }}
+        working-directory: .
+        run: mdbook build                           # 主分支上运行mdbook build指令
+
+      - name: Move HTML files to root 
+        run: |                                      # run: | 运行多行shell脚本
+          mv ./book/html/* ./book/
+          rm -r ./book/html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3         # 使用actions-gh-pages@v3用于自动部署github pages
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book                       # 指令主分支的./book内容作为gh-pages分支的内容
+          force_orphan: true                        # 删除gh-pages的历史记录  ，只保留最新版本

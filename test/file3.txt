@@ -1,0 +1,24 @@
+Filesystem     1K-blocks      Used Available Use% Mounted on
+udev             7951768         0   7951768   0% /dev
+tmpfs            1598724      2756   1595968   1% /run
+/dev/nvme0n1p3 205307624 192618040   2187444  99% /
+tmpfs            7993616   1235128   6758488  16% /dev/shm
+tmpfs               5120         4      5116   1% /run/lock
+efivarfs             192       116        72  62% /sys/firmware/efi/efivars
+tmpfs            7993616         0   7993616   0% /run/qemu
+/dev/loop1           128       128         0 100% /snap/bare/5
+/dev/loop0         75776     75776         0 100% /snap/core22/1748
+/dev/loop2         75776     75776         0 100% /snap/core22/1802
+/dev/loop3        264576    264576         0 100% /snap/firefox/5889
+/dev/loop4        264576    264576         0 100% /snap/firefox/5917
+/dev/loop5        517248    517248         0 100% /snap/gnome-42-2204/176
+/dev/loop6        528512    528512         0 100% /snap/gnome-42-2204/202
+/dev/loop7         93952     93952         0 100% /snap/gtk-common-themes/1535
+/dev/loop8         13312     13312         0 100% /snap/snap-store/1113
+/dev/loop9         12544     12544         0 100% /snap/snap-store/1216
+/dev/loop10        45568     45568         0 100% /snap/snapd/23545
+/dev/loop11        45568     45568         0 100% /snap/snapd/23771
+/dev/loop12          512       512         0 100% /snap/snapd-desktop-integration/178
+/dev/loop13          640       640         0 100% /snap/snapd-desktop-integration/253
+/dev/nvme1n1p1    262144     38312    223832  15% /boot/efi
+tmpfs            1598720       180   1598540   1% /run/user/1000
