@@ -40,7 +40,7 @@ docker工具使用
 
 git 多人协作系统学习：分支管理、pr管理、commit信息管理
 
-swap 
+swap
 
 磁盘当做内存用
 
@@ -140,10 +140,4 @@ nix对系统的了解很有用
 
 
 
-
-
-
-
-
-
-
+自动创建.md目录：`>markdown All in One:Create Table of Contents`
